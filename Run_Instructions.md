@@ -233,8 +233,8 @@ Clustered by: CustomerID
 3. Use the `online_retail.retail` table
 4. Build visuals for:
    - High-performing products
-   - Sales by country # To be done
-   - Profitability   # To be done  
+   - Sales by country 
+   - Profitability   
 5. Add filters:
    - Year
    - Country
