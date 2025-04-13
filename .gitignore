@@ -1,3 +1,7 @@
 keys/
 .DS_Store
 Notebooks/gcs-connector-hadoop3-2.2.5.jar
+# Ignore Jupyter checkpoints and Anaconda project files
+Notebooks/.ipynb_checkpoints/
+Notebooks/anaconda_projects/
+
