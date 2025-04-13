@@ -18,9 +18,9 @@ spark = SparkSession.builder \
 
 
 # Initialize BigQuery client
-project_id = ''  
-dataset_id = ''  
-table_id = ''
+project_id = ''  # Your PROJECT_ID
+dataset_id = ''  # Your Dataset name
+table_id = ''    # Your Table name
 
 df_spark = spark.read \
     .option("header", "true") \

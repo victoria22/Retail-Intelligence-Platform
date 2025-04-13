@@ -247,3 +247,9 @@ Clustered by: CustomerID
 * Use Airflow UI logs for DAG run validation
 * Validate data with BigQuery preview
 * Monitor dashboard and iterate based on feedback
+
+## OPTIONAL - RUN NOTEBOOK
+
+To run the files found in the Notebooks folder, you need to create a new authentication key on your composer service account which is in this format  PROJECT_ID-compute@developer.gserviceaccount.com. Copy and save the newly .json keys to your composer bucket.
+
+Update the the files with your details before running the notebook.
