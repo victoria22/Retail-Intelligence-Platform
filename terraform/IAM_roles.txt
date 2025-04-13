@@ -1,0 +1,48 @@
+//IAM Roles for Terraform
+
+
+PROJECT_ID="projectid" # Your ProjectID
+SA_EMAIL="Terraform-service-account" # Your Terradoem Service account email
+
+# Assign necessary roles
+gcloud projects add-iam-policy-binding $PROJECT_ID \
+  --member "serviceAccount:$SA_EMAIL" \
+  --role "roles/compute.admin"
+
+gcloud projects add-iam-policy-binding $PROJECT_ID \
+  --member "serviceAccount:$SA_EMAIL" \
+  --role "roles/storage.admin"
+
+gcloud projects add-iam-policy-binding $PROJECT_ID \
+  --member "serviceAccount:$SA_EMAIL" \
+  --role "roles/bigquery.admin"
+
+gcloud projects add-iam-policy-binding $PROJECT_ID \
+  --member "serviceAccount:$SA_EMAIL" \
+  --role "roles/dataproc.admin"
+
+gcloud projects add-iam-policy-binding $PROJECT_ID \
+  --member "serviceAccount:$SA_EMAIL" \
+  --role "roles/composer.admin"
+
+gcloud projects add-iam-policy-binding $PROJECT_ID \
+  --member "serviceAccount:$SA_EMAIL" \
+  --role "roles/iam.serviceAccountUser"
+
+gcloud projects add-iam-policy-binding $PROJECT_ID \
+  --member "serviceAccount:$SA_EMAIL" \
+  --role "roles/serviceusage.serviceUsageAdmin"
+
+gcloud projects add-iam-policy-binding $PROJECT_ID \
+  --member "serviceAccount:$SA_EMAIL" \
+  --role "roles/editor"
+
+gcloud projects add-iam-policy-binding $PROJECT_ID \
+  --member="serviceAccount:$SA_EMAIL" \
+  --role="roles/owner"
+
+
+
+
+
+
