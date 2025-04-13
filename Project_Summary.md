@@ -21,7 +21,7 @@ The processed data will power a Looker Studio dashboard providing business users
 - **Cloud Composer (Airflow)**: Pipeline orchestration  
 - **Looker Studio**: Business intelligence dashboard  
 
-![Alt text](Pipeline_Architecture_Diagram.png)
+![Alt text](diagrams/Pipeline_Architecture.png)
 
 
 ### 1. Data Ingestion (GCS)
@@ -113,7 +113,7 @@ The interactive dashboard titled High-performing Product Identification has been
 
 Below is a snapshot of the visualization, showcasing the dynamic charts and tables designed for exploring product performance across various dimensions.
 
-![alt text](Visualisation.png)
+![alt text](diagrams/Visualisation.png)
 
 
 
