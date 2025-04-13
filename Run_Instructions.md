@@ -120,7 +120,7 @@ Ensure the following scripts are copied into Composer’s bucket:
 
 ```bash
 gsutil cp "/path/to/kaggle.json" gs://<COMPOSER_BUCKET>/scripts/kaggle.json
-gsutil cp Extract_Online_Retail_Data.py" gs://<COMPOSER_BUCKET>/Extract_Online_Retail_Data.py
+gsutil cp Extract_Online_Retail_Data.py gs://<COMPOSER_BUCKET>/Extract_Online_Retail_Data.py
 gsutil cp Transform_Online_Retail_Data.py" gs://<COMPOSER_BUCKET>/Transform_Online_Retail_Data.py
 gsutil cp Environment_Test.py gs://<COMPOSER_BUCKET>/Environment_Test.py
 gsutil cp Online_Retail_Data_etl.py" gs://<COMPOSER_BUCKET>/dags/
