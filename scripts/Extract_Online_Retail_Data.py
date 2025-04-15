@@ -21,7 +21,7 @@ api.dataset_download_files(dataset, path=download_path, unzip=True)
 client = storage.Client()
 
 # Define the GCS bucket
-bucket_name = 'YOUR GCS BUCKET NAME'
+bucket_name = 'gs://retail_intelligence_bucket' # GCS Bucket Name
 
 try:
     bucket = client.get_bucket(bucket_name)

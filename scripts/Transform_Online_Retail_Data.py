@@ -18,13 +18,14 @@ spark = SparkSession.builder \
 
 
 # Initialize BigQuery client
-project_id = ''  # Your PROJECT_ID
-dataset_id = ''  # Your Dataset name
-table_id = ''    # Your Table name
+project_id = 'retail-intelligence-platform'  # Your PROJECT_ID
+dataset_id = 'online_retail'  # Your Dataset name
+table_id = 'retail'    # Your Table name
+bucket_name = 'retail_intelligence_bucket' # Your Bucket Name
 
 df_spark = spark.read \
     .option("header", "true") \
-    .csv('gs://YOUR GCS BUCKET NAME/uk_online_retail_data/online_retail.csv')
+    .csv('gs://retail_intelligence_bucket/uk_online_retail_data/online_retail.csv') # Path to your GCS data storage
 
 # Count duplicates
 df_spark.groupBy(df_spark.columns).count().filter("count > 1").show()
@@ -50,7 +51,7 @@ schema = types.StructType([
 df_spark = spark.read \
     .option("header", "true") \
     .schema(schema) \
-    .csv('gs://YOUR GCS BUCKET NAME/uk_online_retail_data/online_retail.csv')
+    .csv('gs://retail_intelligence_bucket/uk_online_retail_data/online_retail.csv') # Path to GCS Bucket storage
 
 # Explicitly convert InvoiceDate to datetime format
 df_spark = df_spark.withColumn("InvoiceDate", expr("try_to_timestamp(InvoiceDate, 'M/d/yyyy H:mm')"))
@@ -248,7 +249,7 @@ df_final.printSchema()
 
 # Write to BigQuery
 df_final.write.format("bigquery") \
-    .option("temporaryGcsBucket", "YOUR GCS BUCKET NAME") \
+    .option("temporaryGcsBucket", bucket_name) \
     .option("project", project_id) \
     .option("dataset", dataset_id) \
     .option("table", table_id) \

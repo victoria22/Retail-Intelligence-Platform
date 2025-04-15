@@ -21,8 +21,8 @@ LOCAL_TMP_PATH = "/tmp/kaggle.json"
 KAGGLE_AUTH_PATH = "/home/airflow/.kaggle/kaggle.json"
 
 # PySpark scripts
-EXTRACTION_PYSPARK_URI = "gs://europe-west1-composer-env-bc5c9a49-bucket/Extract_Online_Retail_Data.py"
-TRANSFORMATION_LOADING_PYSPARK_URI = "gs://europe-west1-composer-env-bc5c9a49-bucket/Transform_Online_Retail_Data.py"
+EXTRACTION_PYSPARK_URI = "gs://europe-west1-composer-env-bc5c9a49-bucket/Extract_Online_Retail_Data.py" # Path to Extraction scripts in composer bucket
+TRANSFORMATION_LOADING_PYSPARK_URI = "gs://europe-west1-composer-env-bc5c9a49-bucket/Transform_Online_Retail_Data.py" # Path to Transform and load scripts in composer bucket
 
 # Define Dataproc job configurations
 EXTRACTION_PYSPARK_JOB = {

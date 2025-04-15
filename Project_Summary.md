@@ -116,7 +116,7 @@ Below is a snapshot of the visualization, showcasing the dynamic charts and tabl
 ![alt text](diagrams/Visualisation.png)
 
 
-Here is the link to request access to the report: https://lookerstudio.google.com/reporting/67cb854c-2e3c-4aba-9858-237462cabdcf
+Here is the link to view the report: https://lookerstudio.google.com/reporting/67cb854c-2e3c-4aba-9858-237462cabdcf
 
 ---
 
